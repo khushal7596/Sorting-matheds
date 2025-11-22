@@ -1,12 +1,11 @@
-public class Sorting {
+// public class Sorting {
+ // .1 bubble sort
     // public static void printArr(int arr[]){
     //     for(int i = 0 ; i < arr.length; i++){
     //         System.out.print(arr[i]+ " ");
     //     }
     // }
     // public static void main(String [] args){
-
-        // bubble sort
     //    for(int i = 0 ; i < arr.length-1 ; i++){
     //     for(int j = 0 ; j <arr.length - i-1 ;j++){
     //         if(arr[j]>arr[j+1]){
@@ -19,20 +18,20 @@ public class Sorting {
     //    }
     // printArr(arr);
     
-    // selection sort 
-    //         int arr[] ={5 , 3 , 6 , 1, 9};
-    // for(int i = 0 ; i < arr.length-1; i++){
-        //     int small = i ;
-    //     for(int j = i+1 ;  j < arr.length-1;j++ )
-    //     if(arr[small]> arr[j]){
-        //         small = j;
-        //     }
-        //     int temp = arr[i];
-        //     arr[i] = arr[small];
-        //     arr[small] = temp;
-        // }
-        // printArr(arr);
-        // insertion sort
+// .2 selection sort 
+    // int arr[] ={5 , 3 , 6 , 1, 9};
+    //   for(int i = 0 ; i < arr.length-1; i++){
+    // int small = i ;
+    //   for(int j = i+1 ;  j < arr.length-1;j++ )
+    // if(arr[small]> arr[j]){
+    //             small = j;
+    //  }
+    // int temp = arr[i];
+    //         arr[i] = arr[small];
+    //         arr[small] = temp;
+    // }
+    // printArr(arr);
+// .3 insertion sort
         // int arr[] ={5 , 3 , 6 , 1, 9 , 78 , 43 , 4};
         // for(int i = 1 ; i < arr.length;i++ ){
         //     int current = arr[i];
@@ -48,7 +47,7 @@ public class Sorting {
         // printArr(arr);
 
 
-        // merge sort 
+// .3  merge sort 
         // public static void divide(int arr [] , int si , int ei ){
         //     if(si>= ei){
         //         return ;
@@ -92,43 +91,44 @@ public class Sorting {
         //         System.out.print(" "+arr[i]+" ");
         //     }
         // }
-        // Quick Sort 
-        public static int pivotIdx(int arr [] ,int  low , int high){
-            int pivot = arr[high];
-            int i = low -1 ;
-            for(int j = low ; j < high ; j++){
-                if(arr[j] < pivot){
-                    i++;
-                    int  temp = arr[i];
-                    arr[i] = arr[j] ;
-                    arr[j] = temp ;
-                }
+// 4.  Quick Sort 
+        // public static int pivotIdx(int arr [] ,int  low , int high){
+        //     int pivot = arr[high];
+        //     int i = low -1 ;
+        //     for(int j = low ; j < high ; j++){
+        //         if(arr[j] < pivot){
+        //             i++;
+        //             int  temp = arr[i];
+        //             arr[i] = arr[j] ;
+        //             arr[j] = temp ;
+        //         }
 
-            }
-            i++ ;
-            int temp = arr[i];
-            arr[i] = pivot ;
-            arr[high] = temp ;
-            return i ;
+        //     }
+        //     i++ ;
+        //     int temp = arr[i];
+        //     arr[i] = pivot ;
+        //     arr[high] = temp ;
+        //     return i ;
 
 
-        }
-        public static void quickSort(int arr [] , int low , int high){
-            if(low < high){
-                int pivot = pivotIdx(arr , low , high);
-                quickSort(arr , low , pivot-1);
-                quickSort(arr , pivot+1 , high);
-            }
-        }
-        public static void main(String args []){
-            int arr [] = {2,6,9,3,8};
-            int n = arr.length;
-            quickSort(arr , 0 , n-1);
-            for(int i = 0 ; i < n ; i++){
-                System.out.print(arr[i]);
-            }
-        }
+        // }
+        // public static void quickSort(int arr [] , int low , int high){
+        //     if(low < high){
+        //         int pivot = pivotIdx(arr , low , high);
+        //         quickSort(arr , low , pivot-1);
+        //         quickSort(arr , pivot+1 , high);
+        //     }
+        // }
+        // public static void main(String args []){
+        //     int arr [] = {2,6,9,3,8};
+        //     int n = arr.length;
+        //     quickSort(arr , 0 , n-1);
+        //     for(int i = 0 ; i < n ; i++){
+        //         System.out.print(arr[i]);
+        //     }
+        // }
         
     }
 
 // }
+
